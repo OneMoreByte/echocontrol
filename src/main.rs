@@ -17,7 +17,7 @@ impl alexa::RequestHandler for RequestHandler {
                             None => i_dont_understand(),
                         }
                     }
-                    "Hex" => hex_response(),
+                    "test" => hex_response(),
                     _ => i_dont_understand(),
                 }
             }
