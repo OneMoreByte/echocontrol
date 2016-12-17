@@ -1,0 +1,17 @@
+[package]
+name = "MessingAlexa"
+version = "0.1.0"
+authors = ["Jack <onemorebyte13@gmail.com>"]
+
+[[bin]]
+name = "RustMess"
+
+[build-dependencies]
+serde_codegen = "0.8"
+
+[dependencies]
+alexa = "0.1.2"
+
+[dependencies.iron]
+version = "*"
+features = ["ssl"]
