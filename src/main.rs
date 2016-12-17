@@ -6,9 +6,9 @@ struct RequestHandler {}
 impl alexa::RequestHandler for RequestHandler {
     fn handle_request(&self, req: &alexa::Request) -> alexa::Response {
         println!("Ding");
+        println!("Got request : {}", req.request_id);
         match req.body {
             alexa::RequestBody::IntentRequest(ref ir) => {
-                println!("Got request : {}", ir.name.as_str());
                 match ir.name.as_str() {
                     "DoubleNumber" => {
                         let num_o: Option<f64> = ir.slots.get("num").and_then(|n| n.parse().ok());
